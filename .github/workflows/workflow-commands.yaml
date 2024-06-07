@@ -1,4 +1,4 @@
-name: Workflow Comamands
+name: Workflow Commands
 on: [push]
 # a command from a workflow to a runner machine
 
