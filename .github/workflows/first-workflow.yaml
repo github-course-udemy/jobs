@@ -18,7 +18,7 @@ jobs:
         run: sw_vers
 
   dependant-job:
-    runs-on: windowns-latest
+    runs-on: windows-latest
     needs: [run-shell-comands] # only works after this [] work
     steps:
       - name: echo a string
