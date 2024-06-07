@@ -1,0 +1,27 @@
+name: First Workflow
+on: [push] # events
+
+jobs:
+  run-shell-comands:  # id job 1  
+    runs-on: ubuntu-lates # machine
+    steps: #steps of first job
+      - name: echo a string
+        run: echo "hello world"
+      - name: multiline command
+        run: | # more than one step
+          node -v
+          npm -v
+  parallel-job-macos:
+    runs-on: macos-lates
+    steps:
+      - name: View Software Version
+        run: sw_vers
+
+  dependant-job:
+    runs-on: windowns-lates
+    needs: [run-shell-comands] # only works after this [] work
+    steps:
+      - name: echo a string
+        run: Write-Output "Windows String"
+      - name: Error Step
+        run: asjdksa
