@@ -7,4 +7,4 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: Setting a error message
-               run: echo "::error::Missing semicolon" # specific format
+              run: echo "::error::Missing semicolon" # specific format
